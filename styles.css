@@ -1,0 +1,229 @@
+/* importing the fonts  */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+
+body{
+    background-color: var(--violet);
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: repeat-x;
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+}
+
+main{
+    width: 90%;
+    padding: 1rem 2.5rem;
+    max-width: 600px;
+}
+
+/* Styling the top box */
+
+/* .top{
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+} */
+
+.logo{
+    width: 50%;
+    height: 50%;
+
+    margin-bottom: 3rem;
+}
+
+.big-img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Styling the end box  */
+
+.end{
+    text-align: center;
+}
+
+
+h1{
+    font-weight: 600;
+    padding: 0rem 0rem;
+    margin-top: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+p{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 475;
+    margin-bottom: 1.7rem;
+    
+    padding: 0rem 0rem;
+}
+
+button{
+    background-color: white;
+    color: var(--violet);
+    padding: .7rem 5rem;
+    border: none;
+    border-radius: 4rem;
+    font-weight: 500;
+}
+
+button:hover{
+    background-color: var(--soft-magenta);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.fb, .twitter, .insta{
+    width: 10%;
+    height: 10%;
+
+    color: white;
+}
+
+.fb:hover, .twitter:hover, .insta:hover{
+    background-color: var(--soft-magenta);
+    border: 1px solid --soft-magenta;
+    padding: 2px;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.icons{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* media queries for larger screens  */
+
+@media screen and (min-width:850px){
+    body{
+        background-image: url(images/bg-desktop.svg);
+        background-size: 130%;
+
+        padding: 0rem 3rem;
+    }
+
+    main{
+        max-width: 100%;
+        width: 100%;
+        display: grid;
+        gap: 3rem;
+
+        padding: 0rem 2rem;
+
+
+        grid-template-columns: 1fr 1fr;
+
+        min-height: 100vh;
+    }
+
+    .top{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        position: relative;
+
+        width: 100%;
+    }
+
+    .img-1{
+        align-self: flex-start;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .img-2{
+        margin-top: 4rem;
+    }
+    
+    
+    .logo{
+        width: 80%;
+        margin-top: 3rem;
+        /* height: 75%; */
+    }
+
+
+    .end{
+        grid-column: 2;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+
+        position: relative;
+    }
+
+    .fb, .twitter, .insta{
+        width: 15%;
+        height: 15%;
+        
+        /* border: 1px white solid;
+        border-radius: 100%;
+        padding: 10px; */
+    }
+
+    .icons{
+        width: 50%;
+        align-self: flex-end;
+
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        display: flex;
+        justify-content: end;
+
+        margin-bottom: 2rem;
+    }
+
+    .text-box{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        text-align: start;
+        text-wrap: wrap;
+
+        padding-right: 3.5rem;
+    }
+
+    h1{
+        font-size: 2.5rem;
+    }
+    
+    button{
+        padding: 1rem 4rem;
+        border-radius: 4rem;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+}
